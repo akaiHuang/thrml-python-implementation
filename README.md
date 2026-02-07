@@ -1,12 +1,18 @@
 # THRML Python Implementation
 
-### Thermodynamic Hypergraphical Model Library Port
+### 🌡️ Thermodynamic Hypergraphical Model Library Port
 
 A pure Python + NumPy port of the THRML (Thermodynamic Hypergraphical Model Library) framework. This implementation removes the JAX dependency entirely, making thermodynamic computing concepts accessible on any platform without GPU drivers, Metal compatibility issues, or heavyweight dependencies.
 
 ---
 
-## Why This Exists
+## 📋 Quick Summary
+
+> 🐍 **THRML Python Implementation** 是 Extropic 熱力學超圖模型庫（THRML）的純 Python + NumPy 移植版本。🚫 完全移除 JAX 依賴，解決 GPU 驅動程式、macOS Metal 相容性等平台限制問題，讓熱力學計算概念在任何 Python 環境中都能輕鬆運行。🧮 忠實實現了 Block Gibbs 取樣引擎，包含自旋節點（SpinNode）、分類節點（CategoricalNode）、區塊平行化取樣、交互作用群組與 Ising 模型等核心抽象。📐 支援任意圖結構上的可配置偏置與耦合權重，並透過圖著色演算法實現區塊平行化，在 Apple M1 Max 上 100×100 Ising 晶格每次掃描僅需約 50ms。📖 程式碼清晰易讀、文件完善，特別適合想深入理解熱力學計算原理——自旋節點如何透過耦合權重交互、如何將最佳化問題編碼為能量景觀——的學習者與研究者。✅ 最低只需 Python 3.8 + NumPy 即可上手。
+
+---
+
+## 🤔 Why This Exists
 
 The original THRML framework, developed by Extropic for simulating Thermodynamic Sampling Units (TSUs), depends on JAX -- a powerful but platform-sensitive library that introduces GPU driver requirements, Metal compatibility issues on macOS, and a steep setup curve for newcomers.
 
@@ -16,7 +22,7 @@ If you want to understand how thermodynamic computing works -- how spin nodes in
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 thrml-python-implementation/
@@ -36,7 +42,7 @@ thrml-python-implementation/
 
 ---
 
-## Core Concepts
+## 🧠 Core Concepts
 
 | Concept | Implementation | Purpose |
 |---------|---------------|---------|
@@ -50,7 +56,7 @@ thrml-python-implementation/
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -61,7 +67,7 @@ thrml-python-implementation/
 
 ---
 
-## Quick Start
+## 🏁 Quick Start
 
 ```bash
 # Install from source
@@ -74,7 +80,7 @@ python examples/ising_demo.py
 python -m pytest tests/
 ```
 
-### Example: 10x10 Ising Lattice
+### 🔬 Example: 10x10 Ising Lattice
 
 ```python
 import numpy as np
@@ -113,7 +119,7 @@ for block_samples in samples:
 
 ---
 
-## Performance
+## ⚡ Performance
 
 Benchmarked on Apple M1 Max:
 
@@ -126,7 +132,7 @@ For CPU-only workloads, NumPy performance is competitive with JAX. JAX gains its
 
 ---
 
-## Features
+## 🚀 Features
 
 - Block Gibbs sampling with warmup and thinning
 - Spin nodes (Ising model) and categorical nodes
@@ -136,7 +142,7 @@ For CPU-only workloads, NumPy performance is competitive with JAX. JAX gains its
 
 ---
 
-## Author
+## 👤 Author
 
 **Huang Akai (Kai)**
 Founder @ Universal FAW Labs | Creative Technologist | Ex-Ogilvy | 15+ years experience

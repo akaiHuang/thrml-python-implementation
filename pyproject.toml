@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thrml-py"
+version = "0.1.0"
+description = "Pure Python/NumPy implementation of THRML"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "matplotlib>=3.5.0",
+]
+
+[tool.setuptools]
+packages = ["thrml"]

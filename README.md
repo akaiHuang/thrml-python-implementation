@@ -6,6 +6,10 @@ A pure Python + NumPy port of the THRML (Thermodynamic Hypergraphical Model Libr
 
 ---
 
+## About
+
+THRML Python Implementation 是 THRML（Thermodynamic Hypergraphical Model Library）的純 Python + NumPy 移植版本。適合用於快速實驗與教學用途，在不依賴原生/編譯環境的情況下驗證模型與演算法想法。
+
 ## 📋 Quick Summary
 
 > 🐍 **THRML Python Implementation** 是 Extropic 熱力學超圖模型庫（THRML）的純 Python + NumPy 移植版本。🚫 完全移除 JAX 依賴，解決 GPU 驅動程式、macOS Metal 相容性等平台限制問題，讓熱力學計算概念在任何 Python 環境中都能輕鬆運行。🧮 忠實實現了 Block Gibbs 取樣引擎，包含自旋節點（SpinNode）、分類節點（CategoricalNode）、區塊平行化取樣、交互作用群組與 Ising 模型等核心抽象。📐 支援任意圖結構上的可配置偏置與耦合權重，並透過圖著色演算法實現區塊平行化，在 Apple M1 Max 上 100×100 Ising 晶格每次掃描僅需約 50ms。📖 程式碼清晰易讀、文件完善，特別適合想深入理解熱力學計算原理——自旋節點如何透過耦合權重交互、如何將最佳化問題編碼為能量景觀——的學習者與研究者。✅ 最低只需 Python 3.8 + NumPy 即可上手。
